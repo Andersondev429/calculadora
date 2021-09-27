@@ -2,23 +2,40 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
-        <title>CalculaDev</title>
-        <link rel="stylesheet" href="style.css">
+        <title>Calculadora Simples</title>
         <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     
     <body>
         <header class="flex-title">Calculadora Simples</header>
         <main>
-            <div class="flex-container">
-                <h1 class="calculate-title">Seu cálculo:</h1>
-            </div>
+
             <div class="flex-calculate">
-                <p class="number1" id="firstNumber"></p>
-                <p class="number2" id="operacaoDesejada"></p>
-                <p class="number2" id="secondNumber"></p>
-                <p class="igualdade">=</p>
-                <p class="result" id="resultNumber"></p>
+                <form>
+                    <fieldset class="flex-operacao">
+                        <p class="number1" id="firstNumber"></p>
+                        <label for="number1">Digite o primeiro número:</label>
+                        <input type="number" id="firstNumber1" class="numbers" required placeholder="Digite o primeiro número" data-form-firstNumber>     
+                    </fieldset>
+
+                    <fieldset name="form-operacao" class="flex-operacao" id="operacaoPrincipal">
+                        <legend>Selecione a operação desejada</legend>
+                        <label for="adicao"><input type="radio" name="operacao" value="adicao" id="radio-adicao" data-form-adicao checked>Adição</label>
+                        <label for="subtracao"><input type="radio" name="operacao" value="subtracao" id="radio-subtracao" data-form-subtracao>Subtração</label>
+                        <label for="multiplicacao"><input type="radio" name="operacao" value="multiplicacao" id="radio-multiplicacao" data-form-multiplicacao>Multiplicação</label>
+                        <label for="divisao"><input type="radio" name="operacao" value="divisao" id="radio-divisao" data-form-divisao>Divisão</label>
+                    </fieldset>
+
+                    <fieldset class="flex-operacao">
+                        <p class="number2" id="secondNumber"></p>
+                        <label for="number2">Digite o segundo número:</label>
+                        <input type="number" id="secondNumber2" class="numbers" required placeholder="Digite o segundo número" data-form-secondNumber>     
+                    </fieldset>
+                </form>
+                <input type="button" value="Calcular" class="botao-calcular" id="calcular" data-form-calcular>
+                <input type="text" value="" class="result" id="resultado" placeholder="Resultado" data-form-resultado>
+
             </div>
         </main>
     </body>

@@ -1,53 +1,107 @@
 body{
   display:block;
-  background-image: url("https://img.freepik.com/foto-gratis/bloc-notas-calculadora-vacios-azules_23-2148475333.jpg?size=626&ext=jpg");
+  background-image: url("https://atmone.ir/wp-content/uploads/2020/09/atm-income1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-color: #87ceeb;
-  background-attachment: scroll;
 }
 
 .flex-title {
   display: flex;
-  justify-content: center;
   font-size: 60px;
-  margin: 0 0 30px 24%;
-}
-
-.flex-container {
-  margin-left: 55%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  height: 20%;
-  width: 210px;
+  margin: 0 0 8% 10%;
 }
 
 .flex-calculate{
-  margin-left: 45%;
+  margin: 0 0 0 5%;
   display: flex;
+  text-align: center;
   justify-content: center;
-  flex-wrap: wrap;
-  align-items: flex-start;
   height: 40%;
-  width: 460px;
+  width: 34%;
   font-size: 30px;
   font-style: italic;
+  flex-wrap: wrap;
 }
 
-.flex-container .calculate-title {
+.flex-operacao legend{
+  text-align: center;
+}
+
+.flex-operacao{
   display: flex;
-  font-size: 40px;
-  color: black;  
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  padding-bottom: 10%;
+  width: 100%;
+  margin-right: 200px;
 }
 
-.flex-container p {
-  margin: 10px 0 10px 0;
+.numbers{
+  width: 90%;
+  margin-top: 2%;
+  font-size: 20px;
 }
 
-.flex-calculate .result{
-  color: white;
-  padding: 0 0 0 10px;
+.botao-calcular{
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  font-size: 20px;
+  margin-bottom: 5%;
+  background-color: rgb(57, 243, 57);
+}
+
+.result{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 90%;
+  font-size: 20px;
+  background-color:rgb(179, 178, 178);
+  font-weight: bold;
+}
+
+@media(max-width: 768px) {
+  .flex-title {
+    display: flex;
+    font-size: 50px;
+    text-align: center;
+    margin: 0 0 0 0;
+  }
+
+  .flex-calculate{
+    margin: 20px 0 0 0;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    height: 20%;
+    width: 34%;
+    font-size: 25px;
+    font-style: italic;
+  }
+
+  .botao-calcular{
+    display: flex;
+    justify-content: center;
+    margin: 0 100% 0 110%;
+    width: 90%;
+    font-size: 20px;
+    margin-bottom: 5%;
+    background-color: rgb(57, 243, 57);
+  }
+
+  .result{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 20px 0 0 40%;
+    width: 600px;
+    font-size: 20px;
+    background-color:rgb(179, 178, 178);
+    font-weight: bold;
+  }
 }

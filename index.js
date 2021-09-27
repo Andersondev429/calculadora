@@ -1,36 +1,23 @@
-var primeiroValor = parseInt(prompt("Digite o primeiro número:"))
-var segundoValor = parseInt(prompt("Digite o segundo valor:"))
-var operacao = prompt("Digite 1 para adição, 2 para subtração, 3 para multiplicação e 4 para divisão: ")
-
-firstNumber.innerHTML = primeiroValor
-secondNumber.innerHTML = segundoValor
-operacaoDesejada.innerHTML = operacao
+var resultado = document.getElementById("resultado")
+var primeiroValor = document.getElementById("firstNumber1").value
+var segundoValor = document.getElementById("secondNumber2").value
 
 
-if (operacao ==1 ) {
-  var resultadoSoma = primeiroValor + segundoValor  
-  operacaoDesejada.innerHTML = ("+")
-  resultNumber.innerHTML = (resultadoSoma.toFixed(2))  
-} else if (operacao ==2 ) {
-  var resultadoSubstracao = primeiroValor - segundoValor  
-  operacaoDesejada.innerHTML = ("-")
-  resultNumber.innerHTML = (resultadoSubstracao.toFixed(2)) 
-} else if (operacao ==3 ) {
-  var resultadoMultiplicacao = primeiroValor * segundoValor 
-  operacaoDesejada.innerHTML = ("*") 
-  resultNumber.innerHTML = (resultadoMultiplicacao.toFixed(2))  
-} else if (operacao ==4 ) {
-  var resultadoDivisao = primeiroValor / segundoValor 
-  operacaoDesejada.innerHTML = ("/") 
-  resultNumber.innerHTML = (resultadoDivisao.toFixed(2)) 
-} else {
-  alert("Opção inválida")
-  primeiroValor = ""
-  segundoValor = ""
-  operacao = ""
-  resultNumber.innerHTML = "Opção inválida, atualize a página"
+const calcular = () => {
+    var operacoes = document.querySelector('input[name="operacao"]:checked').value
+    if (operacoes == "adicao") {
+        resultado = (parseFloat(firstNumber1.value)) + parseFloat(secondNumber2.value)
+    } else if (operacoes == "subtracao") {
+        resultado = (parseFloat(firstNumber1.value) - parseFloat(secondNumber2.value))
+    } else if (operacoes == "multiplicacao") {
+        resultado = (parseFloat(firstNumber1.value) * parseFloat(secondNumber2.value))
+    } else if (operacoes == "divisao") {
+        resultado = (parseFloat(firstNumber1.value) / parseFloat(secondNumber2.value))
+    } else{
+        resultado = "Opção inválida, selecione a operação"
+    }
+    document.getElementById('resultado').setAttribute("value", resultado.toFixed(2));
 }
 
-document.write(primeiroValor)
-document.write(operacao)
-document.write(segundoValor)
+var calculo = document.getElementById("calcular")
+calculo.addEventListener("click", ()=> calcular())
